@@ -1,0 +1,2 @@
+class ScormCloudClient::BaseService
+end
