@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+  <courselist>
+    <course id="1" title="Golf Explained - Run-time Basic Calls" versions="-1" registrations="0" size="411424" >
+      <tags></tags>
+      <learningStandard/>
+    </course>
+  </courselist>
+</rsp>
