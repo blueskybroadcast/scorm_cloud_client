@@ -1,9 +1,12 @@
 class ScormCloudClient::Responses::Course < ScormCloudClient::BaseResponse
+
+  private
+
   def import_course
     {
-      success: xml.xpath('//@successful').first.text == 'true',
-      title: xml.xpath('//title').first.text,
-      message: xml.xpath('//message').first.text
+      success: xml.at_xpath('//@successful').text == 'true',
+      title: xml.at_xpath('//title').text,
+      message: xml.at_xpath('//message').text
     }
   end
 
@@ -18,10 +21,10 @@ class ScormCloudClient::Responses::Course < ScormCloudClient::BaseResponse
   end
 
   def exists
-    xml.xpath('//rsp/result').text == 'true'
+    xml.at_xpath('//rsp/result').text == 'true'
   end
 
   def update_assets
-    xml.xpath('//rsp/success').first.name == 'success'
+    xml.at_xpath('//rsp/success').name == 'success'
   end
 end

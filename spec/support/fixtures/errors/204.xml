@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="204" msg="An invalid format parameter is specified (for now format is ignored, only XML is returned)"/>
+</rsp>

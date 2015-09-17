@@ -24,7 +24,7 @@ class ScormCloudClient::BaseService
   def parse_response(xml, method)
     klass_name = self.class.name.split('::').last
     method_name = method.gsub(/(.)([A-Z])/,'\1_\2').downcase
-    ScormCloudClient::Responses.const_get(klass_name).new(xml).public_send(method_name)
+    ScormCloudClient::Responses.const_get(klass_name).new(xml).parse_result(method_name)
   end
 
   def specified_http_mehods

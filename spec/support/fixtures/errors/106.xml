@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="106" msg="The required ts parameter is invalid (needs to be of the form yyyyMMddHHmmss)"/>
+</rsp>

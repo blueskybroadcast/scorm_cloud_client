@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="203" msg="A required parameter for the called method is missing from the request"/>
+</rsp>

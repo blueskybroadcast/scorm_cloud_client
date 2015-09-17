@@ -9,8 +9,8 @@ describe ScormCloudClient::Services::Course do
 
     describe '#import_course' do
       it 'executes method "importCourse" with params and file' do
-        expect(subject).to receive(:execute_method).with('importCourse', params, filedata: :file)
-        subject.import_course(params, :file)
+        expect(subject).to receive(:execute_method).with('importCourse', params, file: :file)
+        subject.import_course(:file, params)
       end
     end
 
@@ -29,5 +29,5 @@ describe ScormCloudClient::Services::Course do
     end
   end
 
-  it_behaves_like 'service', prefix: described_class::API_METHOD_PREFIX, methods: { importCourse: :post }
+  it_behaves_like 'service', prefix: described_class::API_METHOD_PREFIX, methods: { importCourse: :post, updateAssets: :post }
 end

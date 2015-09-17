@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="101" msg="A general security error has occured, i.e. the security check has failed."/>
+</rsp>

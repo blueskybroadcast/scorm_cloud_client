@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="107" msg="The passed ts parameter has expired (timestamp sent in request must be within certain amount of time within when server fulfills the request)"/>
+</rsp>

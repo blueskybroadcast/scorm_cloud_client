@@ -6,7 +6,7 @@ describe ScormCloudClient::Responses::Debug do
     let(:result) { 'pong' }
 
     it 'returns "pong"' do
-      expect(subject.ping).to be_eql(result)
+      expect(subject.send(:ping)).to be_eql(result)
     end
   end
 
@@ -15,7 +15,7 @@ describe ScormCloudClient::Responses::Debug do
     let(:result) { { time_zone: 'UTC', time: '20150825195305' } }
 
     it 'returns info about current time' do
-      expect(subject.get_time).to be_eql(result)
+      expect(subject.send(:get_time)).to be_eql(result)
     end
   end
 end

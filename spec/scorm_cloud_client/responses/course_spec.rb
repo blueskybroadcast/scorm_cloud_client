@@ -6,7 +6,7 @@ describe ScormCloudClient::Responses::Course do
     let(:result) { true }
 
     it 'returns result of exists call' do
-      expect(subject.exists).to be_eql(result)
+      expect(subject.send(:exists)).to be_eql(result)
     end
   end
 
@@ -19,7 +19,7 @@ describe ScormCloudClient::Responses::Course do
     end
 
     it 'returns info courses' do
-      expect(subject.get_course_list).to be_eql(result)
+      expect(subject.send(:get_course_list)).to be_eql(result)
     end
   end
 end

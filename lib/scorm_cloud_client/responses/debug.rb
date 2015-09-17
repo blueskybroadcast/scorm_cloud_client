@@ -1,12 +1,15 @@
 class ScormCloudClient::Responses::Debug < ScormCloudClient::BaseResponse
+
+  private
+
   def ping
-    xml.xpath('//rsp/pong').first.name
+    xml.at_xpath('//rsp/pong').name
   end
 
   def get_time
     {
-      time: xml.xpath('//currenttime').first.text,
-      time_zone: xml.xpath('//@tz').first.value
+      time: xml.at_xpath('//currenttime').text,
+      time_zone: xml.at_xpath('//@tz').value
     }
   end
 end

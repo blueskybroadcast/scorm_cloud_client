@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rsp stat="fail">
+  <err code="104" msg="The sig parameter is invalid (signature sent in the request does not match signature generated on the server)"/>
+</rsp>

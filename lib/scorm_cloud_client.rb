@@ -2,6 +2,7 @@ require 'digest/md5'
 require 'nokogiri'
 
 module ScormCloudClient
+  module Exceptions; end
   module Responses; end
   module Services; end
 end
@@ -11,22 +12,21 @@ require 'scorm_cloud_client/base_service'
 require 'scorm_cloud_client/http_client'
 require 'scorm_cloud_client/version'
 
+require 'scorm_cloud_client/exceptions/scorm_cloud_exception'
+
 require 'scorm_cloud_client/services/course'
 require 'scorm_cloud_client/services/debug'
 require 'scorm_cloud_client/services/registration'
-require 'scorm_cloud_client/services/reporting'
 
 require 'scorm_cloud_client/responses/course'
 require 'scorm_cloud_client/responses/debug'
 require 'scorm_cloud_client/responses/registration'
-require 'scorm_cloud_client/responses/reporting'
 
 class ScormCloudClient::Client
   SERVICE_MAPPING = {
     debug: ScormCloudClient::Services::Debug,
     course: ScormCloudClient::Services::Course,
-    registration: ScormCloudClient::Services::Registration,
-    reporting: ScormCloudClient::Services::Reporting
+    registration: ScormCloudClient::Services::Registration
   }.freeze
   TIMESTAMP_FORMAT = '%Y%m%d%H%M%S'.freeze
 
