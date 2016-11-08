@@ -27,7 +27,23 @@ describe ScormCloudClient::Services::Course do
         subject.get_course_list
       end
     end
+
+    describe '#import_course_async' do
+      it 'executes method "importCourseAsync" with params' do
+        expect(subject).to receive(:execute_method).with('importCourseAsync', params, file: :file)
+        subject.import_course_async(:file, params)
+      end
+    end
+
+    describe '#get_async_import_result' do
+      let(:token) { 'token_id' }
+
+      it 'executes method "getAsyncImportResult" with params' do
+        expect(subject).to receive(:execute_method).with('getAsyncImportResult', token: token)
+        subject.get_async_import_result(token)
+      end
+    end
   end
 
-  it_behaves_like 'service', prefix: described_class::API_METHOD_PREFIX, methods: { importCourse: :post, updateAssets: :post }
+  it_behaves_like 'service', prefix: described_class::API_METHOD_PREFIX, methods: { importCourse: :post, updateAssets: :post, importCourseAsync: :post }
 end

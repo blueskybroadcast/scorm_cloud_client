@@ -3,7 +3,7 @@ require 'rest-client'
 class ScormCloudClient::HTTPClient
   attr_reader :client, :scorm_client
 
-  API_ENDPOINT = 'http://cloud.scorm.com/api'
+  API_ENDPOINT = 'http://cloud.scorm.com/api'.freeze
 
   def initialize(scorm_client)
     @scorm_client = scorm_client
@@ -16,9 +16,8 @@ class ScormCloudClient::HTTPClient
   end
 
   def stringify_params(params)
-    params.each_with_object([]) do |(key, value), memo|
-      memo.push "#{key}=#{value}"
-    end.join('&')
+    params.each_with_object([]) { |(key, value), memo| memo << "#{key}=#{value}" }
+          .join('&')
   end
 
   def prepare_url(url_params)

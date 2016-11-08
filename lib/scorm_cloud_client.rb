@@ -29,6 +29,7 @@ class ScormCloudClient::Client
     registration: ScormCloudClient::Services::Registration
   }.freeze
   TIMESTAMP_FORMAT = '%Y%m%d%H%M%S'.freeze
+  CUSTOM_ERROR_CODE = 9999
 
   attr_reader :app_id, :secret_key, :http_client, *SERVICE_MAPPING.keys
 
@@ -41,15 +42,15 @@ class ScormCloudClient::Client
   end
 
   def secure_params(url_params)
-		url_params[:appid] = @app_id
-		url_params[:ts] = Time.now.utc.strftime(TIMESTAMP_FORMAT)
+    url_params[:appid] = @app_id
+    url_params[:ts] = Time.now.utc.strftime(TIMESTAMP_FORMAT)
 
-    raw = @secret_key + url_params.keys.
-					sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.
-					map{ |k| "#{k.to_s}#{url_params[k]}" }.
-					join
+    raw = @secret_key + url_params.keys
+                                  .sort { |a, b| a.to_s.downcase <=> b.to_s.downcase }
+                                  .map { |k| "#{k}#{url_params[k]}" }
+                                  .join
 
-    url_params.merge!(sig: Digest::MD5.hexdigest(raw))
+    url_params[:sig] = Digest::MD5.hexdigest(raw)
     url_params
   end
 
