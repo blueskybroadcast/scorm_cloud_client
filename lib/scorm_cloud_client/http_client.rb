@@ -22,6 +22,6 @@ class ScormCloudClient::HTTPClient
 
   def prepare_url(url_params)
     secured_params = scorm_client.secure_params(url_params)
-    "#{API_ENDPOINT}?#{stringify_params(secured_params)}"
+    URI.encode("#{API_ENDPOINT}?#{stringify_params(secured_params)}")
   end
 end
