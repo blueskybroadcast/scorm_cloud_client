@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<registrationreport format="activity" regid="myreg27" instanceid="0">
+  <activity id="articulate_rise">
+    <title>ACE 19 - Case Finances: What Arbitrators Need to Know</title>
+    <attempts>1</attempts>
+    <complete>incomplete</complete>
+    <success>passed</success>
+    <timeacrossattempts>0000:15:41.98</timeacrossattempts>
+    <time></time>
+    <score>43</score>
+    <children>
+      <activity id="i1">
+        <title>ACE 19 - Case Finances: What Arbitrators Need to Know</title>
+        <attempts>2</attempts>
+        <complete>complete</complete>
+        <success>passed</success>
+        <timeacrossattempts>0000:15:41.98</timeacrossattempts>
+        <time>0000:15:41.98</time>
+        <score>43</score>
+        <children></children>
+      </activity>
+    </children>
+  </activity>
+</registrationreport>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<registrationreport format="full" regid="myreg74" instanceid="0">
+  <activity id="articulate_rise">
+    <title>Pre Assessment</title>
+    <satisfied>true</satisfied>
+    <completed>false</completed>
+    <timeacrossattempts>0000:02:08.47</timeacrossattempts>
+    <progressstatus>true</progressstatus>
+    <attempts>1</attempts>
+    <suspended>false</suspended>
+    <objectives>
+     <objective id="PRIMARYOBJ">
+       <measurestatus>false</measurestatus>
+       <normalizedmeasure>0.0</normalizedmeasure>
+       <progressstatus>true</progressstatus>
+       <satisfiedstatus>true</satisfiedstatus>
+     </objective>
+    </objectives>
+    <runtime>
+     <completion_status>completed</completion_status>
+     <credit>Credit</credit>
+     <entry>AbInitio</entry>
+     <exit>Unknown</exit>
+     <learnerpreference>
+       <audio_level>1.0</audio_level>
+       <language/>
+       <delivery_speed>1.0</delivery_speed>
+       <audio_captioning>0</audio_captioning>
+     </learnerpreference>
+     <location>null</location>
+     <mode>Normal</mode>
+     <progress_measure/>
+     <score_scaled>53</score_scaled>
+     <score_raw>534</score_raw>
+     <total_time>0000:00:00.00</total_time>
+     <timetracked>0000:02:08.47</timetracked>
+     <success_status>Incomplete</success_status>
+     <suspend_data><![CDATA[user data]]></suspend_data>
+     <comments_from_learner>
+       <comment>
+         <value />
+         <location />
+         <date_time />
+       </comment>
+     </comments_from_learner>
+     <comments_from_lms>
+       <comment></comment>
+     </comments_from_lms>
+     <interactions>
+       <interaction id="1">
+         <objectives>
+           <objective id="1" />
+         </objectives>
+         <timestamp />
+         <correct_responses>
+           <response id="1" />
+         </correct_responses>
+         <weighting />
+         <learner_response />
+         <result />
+         <latency />
+         <description />
+       </interaction>
+     </interactions>
+     <objectives>
+       <objective id="PRIMARYOBJ">
+         <score_scaled/>
+         <score_min/>
+         <score_raw/>
+         <score_max/>
+         <success_status>unknown</success_status>
+         <completion_status>unknown</completion_status>
+         <progress_measure/>
+         <description>null</description>
+       </objective>
+     </objectives>
+     <static>
+       <completion_threshold/>
+       <launch_data/>
+       <learner_id>daveid</learner_id>
+       <learner_name>dave e</learner_name>
+       <max_time_allowed/>
+       <scaled_passing_score/>
+       <time_limit_action>Undefined</time_limit_action>
+     </static>
+    </runtime>
+  </activity>
+</registrationreport>

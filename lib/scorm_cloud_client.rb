@@ -13,6 +13,7 @@ require 'scorm_cloud_client/http_client'
 require 'scorm_cloud_client/version'
 
 require 'scorm_cloud_client/exceptions/scorm_cloud_exception'
+require 'scorm_cloud_client/exceptions/unsupported_format_exception'
 
 require 'scorm_cloud_client/services/course'
 require 'scorm_cloud_client/services/debug'
