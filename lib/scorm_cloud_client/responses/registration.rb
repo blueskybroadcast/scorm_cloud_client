@@ -4,6 +4,9 @@ class ScormCloudClient::Responses::Registration < ScormCloudClient::BaseResponse
   COMPLETE_STATUSES = %w(complete unknown).freeze
   SUCCESS_STATUSES = %w(passed unknown).freeze
 
+  MINUTE_IN_SECONDS = 60
+  HOUR_IN_SECONDS = MINUTE_IN_SECONDS * 60
+
   def registration_result
     report_format = xml.at_xpath('//@format').value
 
@@ -68,6 +71,8 @@ class ScormCloudClient::Responses::Registration < ScormCloudClient::BaseResponse
   end
 
   def parse_time(time)
-    (Time.parse(time).to_f - Time.parse('00:00').to_f).round
+    hours, minutes, seconds = time.split(':').map(&:to_f)
+
+    (hours * HOUR_IN_SECONDS + minutes * MINUTE_IN_SECONDS + seconds).round
   end
 end

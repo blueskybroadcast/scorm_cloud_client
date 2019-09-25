@@ -41,7 +41,7 @@ describe ScormCloudClient::Responses::Registration do
       let(:result) do
         {
           registration_id: 'myreg74',
-          total_time: 128,
+          total_time: 244928,
           score: 53,
           complete: false,
           success: false
