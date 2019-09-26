@@ -1,11 +1,6 @@
 require 'spec_helper'
 
 describe ScormCloudClient::BaseResponse do
-  # subject { FactoryGirl.build(:base_response, specified_path: 'course/exists.xml') }
-  #
-  # describe '#has_error?' do
-  # end
-
   describe '#parse_result' do
     context 'when has error' do
       {
